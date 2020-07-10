@@ -1,10 +1,13 @@
 function getpic() {
+  var rov=document.getElementById("rover").value;
   var s=sool.value;
-  var ur='https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=';
+  var ur='https://api.nasa.gov/mars-photos/api/v1/rovers/';
+  var u1='/photos?sol=';
   var rest="&";
   var r="page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3";
-  var url=ur+s+rest+r;
-  document.getElementById("div11").innerHTML="--";
+  var url=ur+rov+u1+s+rest+r;
+  document.getElementById("div11").innerHTML="";
+  
   fetch(url)
   .then(resp =>resp.json())
   .then(data =>{
