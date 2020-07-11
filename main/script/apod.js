@@ -1,4 +1,5 @@
 function getq() {
+    document.getElementById("pa").innerHTML=" ";
     var queri=document.getElementById("query").value;
     var url="https://api.nasa.gov/planetary/apod?api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3&date=";
     var fu=url+queri;
