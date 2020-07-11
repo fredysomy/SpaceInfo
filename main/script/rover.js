@@ -15,9 +15,9 @@ function getpic() {
           for(i=0;i<array.length;i++){
               var divm=document.getElementById("div11");
               var divi=document.createElement("div");
-              divi.style.cssText='background-color:red;width:280px;height:300px;margin:2%;';
+              divi.style.cssText='width:280px;height:300px;margin:2%;';
               var divi1=document.createElement("div");
-              divi1.style.cssText='background-color:blue;width:260px;height:250px;margin:10px;';
+              divi1.style.cssText='width:260px;height:250px;margin:10px;';
               var im=document.createElement("img");
               var para1=document.createElement("p");
               var para2=document.createElement("p");
