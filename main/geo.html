@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EONET</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    
+    
+</head>
+<body>
+    
+    <h1 align="center">EONET</h1>
+    <div id="mapid" style="height:400px;width:500px"></div>
+    <script>
+        var mymap=L.map('mapid').setView([51.505, -0.09], 1);
+        var marker=L.marker([51.5, -0.09]).addTo(mymap);
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoiZnJlZHlzb215IiwiYSI6ImNrY2pmZnpjcTFqanIzM284YTBya3RrMTQifQ.xhRrn00Rp1XRp4nv4IlUQQ'
+    }).addTo(mymap);
+    
+        fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/8').
+    then(resp => resp.json())
+    .then(data => {
+       
+       var array=data[Object.keys(data)[3]]
+       for(i=0;i<array.length;i++) {
+           var xx=array[i].geometries[0].coordinates;
+           yy=xx[0]+2*xx[0];
+           L.marker([xx[1],xx[0]]).addTo(mymap);
+       }
+    });
+    </script>
+</body>
+</html>
