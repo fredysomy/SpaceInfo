@@ -15,6 +15,7 @@ function getpic() {
           for(i=0;i<array.length;i++){
               var divm=document.getElementById("div11");
               var divi=document.createElement("div");
+               var hr=document.createElement("a");
               divi.style.cssText='width:280px;height:300px;margin:2%;';
               var divi1=document.createElement("div");
               divi1.style.cssText='width:260px;height:250px;margin:10px;';
@@ -34,11 +35,13 @@ function getpic() {
               var stat=dat.status
               var eardate=data1.earth_date
               im.setAttribute("src",x);
+              hr.setAttribute("href",x);
               im.style.cssText='background-size: cover;width:100%;height:100%;';
               var n1=document.createTextNode(namerover);
               var n2=document.createTextNode(stat);
               var n3=document.createTextNode(eardate);
-              divi1.appendChild(im);
+               hr.appendChild(im);
+              divi1.appendChild(hr);
               divi.appendChild(n1);
               divi.appendChild(n2);
               divi.appendChild(n3);
