@@ -36,7 +36,7 @@ function getpic() {
               var eardate=data1.earth_date
               im.setAttribute("src",x);
               hr.setAttribute("href",x);
-hr.setAttribute("target",_blank);
+
               im.style.cssText='background-size: cover;width:100%;height:100%;';
               var n1=document.createTextNode(namerover);
               var n2=document.createTextNode(stat);
