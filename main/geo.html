@@ -20,7 +20,7 @@
     <button class="bt" onclick="getmapprop(8)">Wildfires</button>
     <button class="bt" onclick="getmapprop(10)">Severe Storms</button>
     <button class="bt" onclick="getmapprop(12)">Volcanoes</button>
-    
+    <div id="txt"></div>
     <div id="mapid" style="height:500px;width:800px;margin:0 auto;"></div>
     <script>
         var mymap=L.map('mapid').setView([51.505, -0.09], 1);
@@ -34,11 +34,17 @@
         accessToken: 'pk.eyJ1IjoiZnJlZHlzb215IiwiYSI6ImNrY2pmZnpjcTFqanIzM284YTBya3RrMTQifQ.xhRrn00Rp1XRp4nv4IlUQQ'
     }).addTo(mymap);
     function getmapprop(numb) {
-      
+        document.getElementById("txt").innerHTML=" ";
         var url="https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/"+numb;
         fetch(url).
     then(resp => resp.json())
     .then(data => {
+       var t=data.title;
+       var d=data.description;
+       var tx=document.createElement("p");
+       var n=document.createTextNode(t+"---"+d);
+       var di=document.getElementById("txt");
+       di.appendChild(n); 
        
        var array=data[Object.keys(data)[3]]
        for(i=0;i<array.length;i++) {
