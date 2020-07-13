@@ -16,7 +16,12 @@
 <body>
     
     <h1 align="center">EONET</h1>
-    <div id="mapid" style="height:400px;width:500px"></div>
+    <button class="bt" onclick="getmapprop(15)">Sea and Lake Ice</button>
+    <button class="bt" onclick="getmapprop(8)">Wildfires</button>
+    <button class="bt" onclick="getmapprop(10)">Severe Storms</button>
+    <button class="bt" onclick="getmapprop(12)">Volcanoes</button>
+    
+    <div id="mapid" style="height:500px;width:800px;margin:0 auto;"></div>
     <script>
         var mymap=L.map('mapid').setView([51.505, -0.09], 1);
         
@@ -28,18 +33,24 @@
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoiZnJlZHlzb215IiwiYSI6ImNrY2pmZnpjcTFqanIzM284YTBya3RrMTQifQ.xhRrn00Rp1XRp4nv4IlUQQ'
     }).addTo(mymap);
-    
-        fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/10').
+    function getmapprop(numb) {
+      
+        var url="https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/"+numb;
+        fetch(url).
     then(resp => resp.json())
     .then(data => {
        
        var array=data[Object.keys(data)[3]]
        for(i=0;i<array.length;i++) {
            var xx=array[i].geometries[0].coordinates;
+           
+           var titl=array[i].title;
            yy=xx[0]+2*xx[0];
-           L.marker([xx[1],xx[0]]).addTo(mymap);
+           L.marker([xx[1],xx[0]]).addTo(mymap).bindPopup(titl)
+    .openPopup();
+
        }
-    });
+    });}
     </script>
 </body>
 </html>
