@@ -16,14 +16,14 @@
 <body>
     
     <h1 align="center">EONET</h1>
-    <button class="bt" onclick="getmapprop(15)">Sea and Lake Ice</button>
-    <button class="bt" onclick="getmapprop(8)">Wildfires</button>
-    <button class="bt" onclick="getmapprop(10)">Severe Storms</button>
-    <button class="bt" onclick="getmapprop(12)">Volcanoes</button>
+    <button class="bt" onclick="getmapprop(15,ice)">Sea and Lake Ice</button>
+    <button class="bt" onclick="getmapprop(8,fire)">Wildfires</button>
+    <button class="bt" onclick="getmapprop(10,storm)">Severe Storms</button>
+    <button class="bt" onclick="getmapprop(12,volcan)">Volcanoes</button>
     <div id="txt"></div>
     <div id="mapid" style="height:500px;width:800px;margin:0 auto;"></div>
     <script>
-        var mymap=L.map('mapid').setView([51.505, -0.09], 1);
+        var mymap=L.map('mapid').setView([51.505, -0.09], 2);
         
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -33,7 +33,27 @@
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoiZnJlZHlzb215IiwiYSI6ImNrY2pmZnpjcTFqanIzM284YTBya3RrMTQifQ.xhRrn00Rp1XRp4nv4IlUQQ'
     }).addTo(mymap);
-    function getmapprop(numb) {
+    var ice = L.icon({
+    iconUrl: 'style/ice.png',
+    iconSize: [35, 35],
+    iconAnchor: [15, 15],
+    });
+    var fire = L.icon({
+    iconUrl: 'style/fire.png',
+    iconSize: [35, 35],
+    iconAnchor: [15, 15],
+    });
+    var storm = L.icon({
+    iconUrl: 'style/storm.png',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+    });
+    var volcan = L.icon({
+    iconUrl: 'style/volcan.png',
+    iconSize: [35, 35],
+    iconAnchor: [15, 15],
+    });
+    function getmapprop(numb,myico) {
         document.getElementById("txt").innerHTML=" ";
         var url="https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/"+numb;
         fetch(url).
@@ -52,7 +72,7 @@
            
            var titl=array[i].title;
            yy=xx[0]+2*xx[0];
-           L.marker([xx[1],xx[0]]).addTo(mymap).bindPopup(titl)
+           L.marker([xx[1],xx[0]] , {icon: myico}).addTo(mymap).bindPopup(titl)
     .openPopup();
 
        }
