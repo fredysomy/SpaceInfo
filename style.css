@@ -1,1 +1,48 @@
+html{
+    padding:0;
+    margin:0;
+}
+.side-nav{
+    position: absolute;
+    z-index:2;
+    width:0px;
+    height:100vh;
+    background-color:white;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.closebtn{
+    font-size: 50px;
+    text-decoration: none;
+    position:relative;
+    color:black;
 
+}
+.startbtn{
+    font-size: 44px;
+    color:white;
+    text-decoration: none;
+    position: absolute;
+    color:black;
+    left:0px;
+}
+.dd{
+    width:0px;
+    height:100vh;
+    background-color: red;
+    z-index: 3;
+    position: absolute;
+}
+.container-fluid{
+    padding:0;
+    margin:0;
+    
+}
+.jumbotron{
+    margin:0;
+    height:fit-content;
+   
+}
+.navbar navbar-light bg-light{
+    padding:0;
+}
