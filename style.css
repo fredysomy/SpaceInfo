@@ -1,15 +1,21 @@
-html{
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
     padding:0;
     margin:0;
 }
 .side-nav{
     position: absolute;
     z-index:2;
+    padding-left: 10px;
     width:0px;
     height:100vh;
-    background-color:white;
+    background-color:#e9ecef;
     overflow: hidden;
     transition: 0.2s;
+}
+.side-nav a{
+    text-decoration: none;
+    color:black;
 }
 .closebtn{
     font-size: 50px;
@@ -45,4 +51,8 @@ html{
 }
 .navbar navbar-light bg-light{
     padding:0;
+}
+.di{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
 }
