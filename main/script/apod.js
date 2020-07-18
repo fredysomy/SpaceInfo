@@ -10,7 +10,7 @@ function getq() {
      dat1=data['url'];
         console.log(dat1);
         console.log(dat);
-        document.getElementById('frame').setAttribute("src",dat1);
+        document.getElementById('im').setAttribute("src",dat1);
         var exp=document.createElement("p");
        var xc=document.createTextNode(dat);
        document.getElementById("pa").appendChild(xc);
