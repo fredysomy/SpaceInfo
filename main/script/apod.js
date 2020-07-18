@@ -32,4 +32,4 @@ xyz.style.cssText="width:80%;height:80%;margin:10%;margin-top:3%;";
 
 
 
-}
+
