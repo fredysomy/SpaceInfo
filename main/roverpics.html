@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head><title>Mars Rover</title>
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="style/roverstyle.css">
     </head>
     <body>
-        <h1 align="center">Mars Rover Photos on SOL(solar years)</h1>
-        <h2 align="center">Mars Rovers and their period of function</h2>
-        <h4 align="center">Curiosity Rover 0-2105 SOL and Active</h4>
-        <h4 align="center">Opportunity Rover 0-5107 SOL and Compleated</h4>
-        <h4 align="center">Spirit Rover 0-2208 SOL and Compleated</h4>
-        <div align="center">
-            <select id="rover">
-                <option value=" ">Select the Rover</option>
-                <option value="curiosity">Curiosity</option>
-                <option value="opportunity">Opportunity</option>
-                <option value="spirit">Spirit</option>
-            </select><input id="sool" type="text" placeholder="Enter the SOL">
-        <button onclick="getpic()">image</button></div>
-        <div class="div1" id="div11" style="justify-content:center;width: 100%;height:fit-content;display: flex;flex-direction: row;flex-wrap: wrap;">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"  onclick="opennav()" width="35" height="35" alt="" loading="lazy">SpaceInfo
+            </a>
+          </nav>
+         <div class="side-nav" id="side-nav">
+          <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
+           
+          <a href="#" class="display-4"><h3>HOME</h3></a>
+          <hr class="my-4">
+          <a href="main/apod.html" class="lead"><h3>APOD</h3></a>
+          <hr class="my-4">
+          <a href="main/roverpics.html" class="lead"><h3>Mars Images</h3></a>
+          <hr class="my-4">
+        <a href="main/geo.html" class="lead"><h3>EONET</h3></a>
+        <hr class="my-4">
+            <a href="main/iss.html" class="lead"><h3>ISS live position</h3></a>
+            <hr class="my-4">
+         </div>
+         
+        <div class="container-fluid">
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="display-4" align="center">Mars Images</h1>
+                <p class="lead" align="center">This website shows images taken from Mars from the rovers(Opportunity,Spirit,Curiosity).</p>
+<p class="lead" align="center"><b>Curiosity Rover-</b> 0-2105 SOL and Active,<b>Opportunity Rover-</b>0-5107 SOL and Compleated,<b>Spirit Rover-</b>0-2208 SOL and Compleated</p>
+<div align="center">
+    <select id="rover">
+        <option value=" ">Select the Rover</option>
+        <option value="curiosity">Curiosity</option>
+        <option value="opportunity">Opportunity</option>
+        <option value="spirit">Spirit</option>
+    </select><input id="sool" type="text" placeholder="Enter the SOL">
+<button onclick="getpic()">image</button></div>
+<div class="div1" id="div11" style="justify-content:center;width: 100%;height:fit-content;display: flex;flex-direction: row;flex-wrap: wrap;">
+</div></div>
+           
         
         </div>
-        <script src="script/rover.js"></script>    
+        <script src="script/rover.js"></script>
+        <script>
+            function opennav() {
+            document.getElementById("side-nav").style.width="300px";
+        }
+        function closeNav() {
+            document.getElementById("side-nav").style.width="0px";
+        }
+          </script>    
     </body>
 </html>
