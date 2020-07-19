@@ -37,13 +37,21 @@
         <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
         <hr class="my-4">
      </div>
-    <h1 align="center">EONET</h1>
-    <button class="bt" onclick="getmapprop(15,ice)">Sea and Lake Ice</button>
-    <button class="bt" onclick="getmapprop(8,fire)">Wildfires</button>
-    <button class="bt" onclick="getmapprop(10,storm)">Severe Storms</button>
-    <button class="bt" onclick="getmapprop(12,volcan)">Volcanoes</button>
-    <div id="txt"></div>
-    <div id="mapid"></div>
+     <div class="container-fluid">
+       <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4" align="center">EONET</h1>
+        <p class="lead text-muted" id="intro" align="center">The Earth Observatory Natural Event Tracker.Users can browse the entire globe daily and look for natural events as they occur. Storms are regularly spotted in the tropics, dust storms over deserts, forest fires in the summers.</p>
+        <div align="center">
+        <button class="btn btn-primary btn-sm text-center" onclick="getmapprop(15,ice)">Sea and Lake Ice</button>
+        <button class="btn btn-primary btn-sm text-center" onclick="getmapprop(8,fire)">Wildfires</button>
+        <button class="btn btn-primary btn-sm text-center" onclick="getmapprop(10,storm)">Severe Storms</button>
+        <button class="btn btn-primary btn-sm text-center" onclick="getmapprop(12,volcan)">Volcanoes</button></div>
+        <div id="txt" align="center"></div>
+        <div id="mapid"></div>
+       </div>
+     </div>
+     
+   
    <script src="script/eonet.js"></script>
    <script>
     function opennav() {
