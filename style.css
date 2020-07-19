@@ -3,7 +3,7 @@
     margin:0;
 }
 .navbar .navbar-brand{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .side-nav{
     position: fixed;
@@ -56,5 +56,21 @@
     font-family: 'Roboto', sans-serif;
     font-size: 40px;
 }
+.carousel_edits{
+    width:50%;
+    height:50%;
+    margin:0 auto;
 
+}
+.carousel_edits h5,p{
+    color:black;
+}
+@media all and (max-width:500px){
+    .carousel_edits{
+        width:90%;
+        height:70%;
+        margin:0 auto;
+    
+    }
+}
 
