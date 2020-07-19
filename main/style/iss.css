@@ -1,0 +1,15 @@
+body{
+    width:100%;
+    height:100%;
+}
+#mapid{
+    height:60vh;
+    width:60%;
+    margin:0 auto;
+}
+@media all and (max-width:500px){
+    #mapid{
+        height:60vh;
+        width:90%;
+    }
+}
