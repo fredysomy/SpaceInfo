@@ -17,11 +17,38 @@
 <link rel="stylesheet" href="style/iss.css" type="text/css">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"  onclick="opennav()" width="35" height="35" alt="" loading="lazy">SpaceInfo
+        </a>
+      </nav>
+     <div class="side-nav" id="side-nav">
+      <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
+       
+      <a href="../index.html" class="display-4"><h3>HOME</h3></a>
+      <hr class="my-4">
+      <a href="apod.html" class="lead"><h3>APOD</h3></a>
+      <hr class="my-4">
+      <a href="roverpics.html" class="lead"><h3>Mars Images</h3></a>
+      <hr class="my-4">
+    <a href="geo.html" class="lead"><h3>EONET</h3></a>
+    <hr class="my-4">
+        <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
+        <hr class="my-4">
+     </div>
     <div id="mapid"></div>
     <script src="script/iss.js">
      
         
     </script>
+      <script>
+        function opennav() {
+        document.getElementById("side-nav").style.width="300px";
+    }
+    function closeNav() {
+        document.getElementById("side-nav").style.width="0px";
+    }
+      </script>
     
 </body>
 </html>
