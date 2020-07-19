@@ -15,10 +15,21 @@ var mymap=L.map('mapid').setView([0, 0], 1);
 
         });
         var mark=L.marker([0,0] ,{icon:icon1}).addTo(mymap);
-    setInterval(function add() {
-    fetch('https://api.wheretheiss.at/v1/satellites/25544').
+    setInterval(function add() {document.getElementById("txt").innerHTML="";
+    fetch('http://api.open-notify.org/iss-now.json').
     then(resp => resp.json()).then(data => {
-        var lat=data.latitude;
-        var lon=data.longitude;
+        var lat=data.iss_position.latitude;
+       
+        var lon=data.iss_position.longitude;
         mark.setLatLng([lat,lon]);
-    });},1000);
+        var tx=document.createElement("p");
+
+        var n=document.createTextNode("Latitude="+lat);
+        var n1=document.createTextNode("Longitude="+lon);
+        var di=document.getElementById("txt");
+        di.appendChild(n); 
+        di.appendChild(document.createElement("br"));
+        di.appendChild(n1);
+       
+      
+    });},5000);
