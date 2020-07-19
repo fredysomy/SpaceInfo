@@ -4,6 +4,12 @@ body{
 }
 #mapid{
     height:60vh;
-    width:90%;
+    width:60%;
     margin:0 auto;
+}
+@media all and (max-width:500px){
+    #mapid{
+        height:60vh;
+        width:90%;
+    }
 }
