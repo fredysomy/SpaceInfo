@@ -42,11 +42,19 @@ body{
     height:60vh;
     width:60%;
     margin:0 auto;
-    z-index:1;
+}
+.jumbotron{
+    padding:0;
+}
+#intro{
+    margin:0 15%;
 }
 @media all and (max-width:500px){
     #mapid{
         height:60vh;
         width:90%;
+    }
+    #intro{
+        margin:0;
     }
 }
