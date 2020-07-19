@@ -37,9 +37,14 @@ then(resp => resp.json())
 var t=data.title;
 var d=data.description;
 var tx=document.createElement("p");
-var n=document.createTextNode(t+"---"+d);
+
+var n=document.createTextNode(t);
+var n1=document.createTextNode(d);
 var di=document.getElementById("txt");
 di.appendChild(n); 
+di.appendChild(document.createElement("br"));
+di.appendChild(n1); 
+
 
 var array=data[Object.keys(data)[3]]
 for(i=0;i<array.length;i++) {
