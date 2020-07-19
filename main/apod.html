@@ -36,18 +36,19 @@
          <div class="jumbotron jumbotron-fluid text-center">
              <h1 class="display-4 text-center">APOD</h1>
              <p class="lead text-center">Asronomical Picture of day</p>
-             <label for query>Enter The Date:</label>
-             <input id="query" type="date">
-             <button type="button" onclick="getq()">Search</button>
-             <div id="im" class="imvi">
-            </div>
-            <div id="pa" style="width:70%;"></div>
+             <label for="query">Enter The Date:</label>
+             <div class="form-group" style="width:200px;margin:0 auto;">
+             <input class="form-control text-center" id="query" type="date">
+             <button type="button" class="btn btn-primary btn-sm" onclick="getq()">Search</button></div>
+             <img id="im" class="imvi">
+            
+            <div id="pa" style="margin:0 20%;"></div>
          </div>
          
      </div>
      <script>
         function opennav() {
-        document.getElementById("side-nav").style.width="300px";
+        document.getElementById("side-nav").style.width="330px";
     }
     function closeNav() {
         document.getElementById("side-nav").style.width="0px";
@@ -56,3 +57,4 @@
     
 </body>
 </html>
+
