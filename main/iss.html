@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,3 +56,62 @@
     
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style/iss.css" type="text/css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"  onclick="opennav()" width="35" height="35" alt="" loading="lazy">SpaceInfo
+        </a>
+      </nav>
+     <div class="side-nav" id="side-nav">
+      <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
+       
+      <a href="../index.html" class="display-4"><h3>HOME</h3></a>
+      <hr class="my-4">
+      <a href="apod.html" class="lead"><h3>APOD</h3></a>
+      <hr class="my-4">
+      <a href="roverpics.html" class="lead"><h3>Mars Images</h3></a>
+      <hr class="my-4">
+    <a href="geo.html" class="lead"><h3>EONET</h3></a>
+    <hr class="my-4">
+        <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
+        <hr class="my-4">
+     </div><div class="container-fluid">
+       <div class="jumbotron jumbotron-fluid">
+    <div id="mapid"></div>
+  <div id="txt" align="center"></div>
+  </div>
+    <script src="script/iss.js">
+     
+        
+    </script>
+      <script>
+        function opennav() {
+        document.getElementById("side-nav").style.width="300px";
+    }
+    function closeNav() {
+        document.getElementById("side-nav").style.width="0px";
+    }
+      </script>
+    
+</body>
+</html>
+>>>>>>> 0a95e08b383e7bca6f75a1956ec5571c24f3d631

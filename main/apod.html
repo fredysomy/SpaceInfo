@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,3 +58,65 @@
     
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOD</title>
+    <link rel="stylesheet" href="style/apod.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="script/apod.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"  onclick="opennav()" width="35" height="35" alt="" loading="lazy">SpaceInfo
+        </a>
+      </nav>
+     <div class="side-nav" id="side-nav">
+      <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
+       
+      <a href="../index.html" class="display-4"><h3>HOME</h3></a>
+      <hr class="my-4">
+      <a href="apod.html" class="lead"><h3>APOD</h3></a>
+      <hr class="my-4">
+      <a href="roverpics.html" class="lead"><h3>Mars Images</h3></a>
+      <hr class="my-4">
+    <a href="geo.html" class="lead"><h3>EONET</h3></a>
+    <hr class="my-4">
+        <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
+        <hr class="my-4">
+     </div>
+     <div class="container-fluid">
+         <div class="jumbotron jumbotron-fluid text-center">
+             <h1 class="display-4 text-center">APOD</h1>
+             <p class="lead text-center">Asronomical Picture of day</p>
+             <label for="query">Enter The Date:</label>
+             <div class="form-group" style="width:200px;margin:0 auto;">
+             <input class="form-control text-center" id="query" type="date">
+             <button type="button" class="btn btn-primary btn-sm" onclick="getq()">Search</button></div>
+             <img id="im" class="imvi">
+            
+            <div id="pa" style="margin:0 20%;"></div>
+         </div>
+         
+     </div>
+     <script>
+        function opennav() {
+        document.getElementById("side-nav").style.width="330px";
+    }
+    function closeNav() {
+        document.getElementById("side-nav").style.width="0px";
+    }
+      </script>
+    
+</body>
+</html>
+
+>>>>>>> 0a95e08b383e7bca6f75a1956ec5571c24f3d631

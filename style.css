@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0a95e08b383e7bca6f75a1956ec5571c24f3d631
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
     padding:0;
     margin:0;
@@ -74,6 +77,7 @@
     
     }
 }
+<<<<<<< HEAD
 @media all and (max-width:350px){
    #main{
        font-size:30px;
@@ -87,4 +91,6 @@ size: 30px 40px;
     
 }
 
+=======
+>>>>>>> 0a95e08b383e7bca6f75a1956ec5571c24f3d631
 
