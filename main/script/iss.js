@@ -24,8 +24,8 @@ var mymap=L.map('mapid').setView([0, 0], 1);
         mark.setLatLng([lat,lon]);
         var tx=document.createElement("p");
 
-        var n=document.createTextNode("Latitude=_"+lat);
-        var n1=document.createTextNode("Longitude=_"+lon);
+        var n=document.createTextNode("Latitude="+lat);
+        var n1=document.createTextNode("Longitude="+lon);
         var di=document.getElementById("txt");
         di.appendChild(n); 
         di.appendChild(document.createElement("br"));
@@ -33,4 +33,4 @@ var mymap=L.map('mapid').setView([0, 0], 1);
         di.appendChild(n1);
        
       
-    });},10000);
+    });},5000);
