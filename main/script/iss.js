@@ -16,7 +16,7 @@ var mymap=L.map('mapid').setView([0, 0], 1);
         });
         var mark=L.marker([0,0] ,{icon:icon1}).addTo(mymap);
     setInterval(function add() {document.getElementById("txt").innerHTML="";
-    fetch('http://api.open-notify.org/iss-now.json').
+    fetch('https://api.wheretheiss.at/v1/satellites/25544').
     then(resp => resp.json()).then(data => {
         var lat=data.iss_position.latitude;
        
