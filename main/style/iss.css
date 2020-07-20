@@ -44,6 +44,11 @@ body{
     margin:0 auto;
     z-index: 1;
 }
+.leaflet-marker-icon {
+	-moz-transition: -moz-transform 2s linear;
+	-webkit-transition: -webkit-transform 2s linear;
+	transition: transform 2s linear;
+}
 @media all and (max-width:500px){
     #mapid{
         height:60vh;
