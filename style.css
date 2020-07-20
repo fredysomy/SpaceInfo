@@ -5,7 +5,7 @@
      scroll-behavior: smooth;
 }
 .navbar .navbar-brand{
-    font-size: 2.5rem;
+    font-size: 1.3rem;
 }
 .side-nav{
     position: fixed;
@@ -74,16 +74,27 @@
         margin:0 auto;
     
     }
+    #main{
+        font-size:31px;
+     }
+     
+     #le{
+        font-size: 17px;
+    }
+    #det{
+        font-size: 27px;
+        font-style: bold;
+    }
 }
 @media all and (max-width:350px){
    #main{
-       font-size:30px;
+       font-size:25px;
     }
     .btn{
 size: 30px 40px;
     }
     #le{
-        font-size: 20px;
+        font-size: 15px;
     }
     
 }
