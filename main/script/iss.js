@@ -32,4 +32,4 @@ var mymap=L.map('mapid').setView([0, 0], 1);
         di.appendChild(n1);
        
       
-    });},10000);
+    });},1000);
