@@ -37,3 +37,8 @@
 .pa p{
     font-size:40px;
 }
+@media all and (max-width:500px){
+    #main{
+        font-size: 31px;
+    }
+} 
