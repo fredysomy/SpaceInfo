@@ -22,15 +22,29 @@ var mymap=L.map('mapid').setView([0, 0], 1);
        
         var lon=data.longitude;
         mark.setLatLng([lat,lon]);
-        var tx=document.createElement("p");
-
-        var n=document.createTextNode("Latitude="+lat);
-        var n1=document.createTextNode("Longitude="+lon);
-        var di=document.getElementById("txt");
-        di.appendChild(n); 
-        di.appendChild(document.createElement("br"));
-        
-        di.appendChild(n1);
-       
-      
-    });},5000);
+        url=`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`;
+        fetch(url).then(resp =>resp.json()).then(data =>{
+            var tx=document.createElement("p");
+            var x=data.localityInfo.informative[0].name;
+            var y=data.localityInfo.informative[0].description;
+            var z=data.city;
+            var aa=data.locality;
+            var bb=data.countryname;
+            var di=document.getElementById("txt");
+            var  cc=document.createElement("p");
+            cc.innerHTML="country="+bb+"<br>";
+            di.appendChild(cc);
+            var  cc1=document.createElement("p1");
+            cc1.innerHTML="city="+z+"<br>";
+            di.appendChild(cc1);
+            var  cc2=document.createElement("p2");
+            cc2.innerHTML="locality="+aa+"<br>";
+            di.appendChild(cc2);
+            var  cc3=document.createElement("p3");
+            cc3.innerHTML="name="+x+"<br>";
+            di.appendChild(cc3);
+            var  cc4=document.createElement("p4");
+            cc4.innerHTML="description="+y+"<br>";
+            di.appendChild(cc4);
+            });
+        });},5000);
