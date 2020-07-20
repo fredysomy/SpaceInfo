@@ -44,6 +44,9 @@ body{
     margin:0 auto;
     z-index: 1;
 }
+.navbar .navbar-brand{
+    font-size: 1.3rem;
+}
 .leaflet-marker-icon {
 	-moz-transition: -moz-transform 2s linear;
 	-webkit-transition: -webkit-transform 2s linear;
@@ -54,4 +57,7 @@ body{
         height:61vh;
         width:90%;
     }
+    #main{
+        font-size:31px;
+     }
 }
