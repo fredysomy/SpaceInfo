@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
     padding:0;
-    margin:0;
+    margin:0;scroll-behavior: smooth;
 }
 .navbar .navbar-brand{
     font-size: 2.5rem;
