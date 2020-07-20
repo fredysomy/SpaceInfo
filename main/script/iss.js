@@ -18,9 +18,9 @@ var mymap=L.map('mapid').setView([0, 0], 1);
     setInterval(function add() {document.getElementById("txt").innerHTML="";
     fetch('https://api.wheretheiss.at/v1/satellites/25544').
     then(resp => resp.json()).then(data => {
-        var lat=data.iss_position.latitude;
+        var lat=data.latitude;
        
-        var lon=data.iss_position.longitude;
+        var lon=data.longitude;
         mark.setLatLng([lat,lon]);
         var tx=document.createElement("p");
 
