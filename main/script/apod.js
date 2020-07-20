@@ -8,10 +8,13 @@ function getq() {
     .then(data => {
         dat=data['explanation'];
      dat1=data['url'];
-        console.log(dat1);
-        console.log(dat);
-        document.getElementById('frame').setAttribute("src",dat1);
+     xyz=document.getElementById('im');
+xyz.style.cssText="width:80%;height:80%;margin:10%;margin-top:3%;";
+        
+       xyz.setAttribute("src",dat1);
+      
         var exp=document.createElement("p");
+        pa.style.cssText="text-align:center;";
        var xc=document.createTextNode(dat);
        document.getElementById("pa").appendChild(xc);
 

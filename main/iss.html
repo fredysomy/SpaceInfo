@@ -10,36 +10,48 @@
    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style/iss.css" type="text/css">
 </head>
 <body>
-    <div id="mapid" style="height:500px;width:800px;margin:0 auto;"></div>
-    <script>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"  onclick="opennav()" width="35" height="35" alt="" loading="lazy">SpaceInfo
+        </a>
+      </nav>
+     <div class="side-nav" id="side-nav">
+      <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
+       
+      <a href="../index.html" class="display-4"><h3>HOME</h3></a>
+      <hr class="my-4">
+      <a href="apod.html" class="lead"><h3>APOD</h3></a>
+      <hr class="my-4">
+      <a href="roverpics.html" class="lead"><h3>Mars Images</h3></a>
+      <hr class="my-4">
+    <a href="geo.html" class="lead"><h3>EONET</h3></a>
+    <hr class="my-4">
+        <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
+        <hr class="my-4">
+     </div><div class="container-fluid">
+       <div class="jumbotron jumbotron-fluid">
+    <div id="mapid"></div>
+  <div id="txt" align="center"></div>
+  </div>
+    <script src="script/iss.js">
      
-        var mymap=L.map('mapid').setView([0, 0], 1);
         
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoiZnJlZHlzb215IiwiYSI6ImNrY2pmZnpjcTFqanIzM284YTBya3RrMTQifQ.xhRrn00Rp1XRp4nv4IlUQQ'
-    }).addTo(mymap);
-    var icon1= L.icon({
-    iconUrl: 'style/iss.png',
-    iconSize: [50, 50],
-    iconAnchor: [25, 25],
-
-        });
-        var mark=L.marker([0,0] ,{icon:icon1}).addTo(mymap);
-    setInterval(function add() {
-    fetch('https://api.wheretheiss.at/v1/satellites/25544').
-    then(resp => resp.json()).then(data => {
-        var lat=data.latitude;
-        var lon=data.longitude;
-        mark.setLatLng([lat,lon]);
-    });},1000);
     </script>
+      <script>
+        function opennav() {
+        document.getElementById("side-nav").style.width="300px";
+    }
+    function closeNav() {
+        document.getElementById("side-nav").style.width="0px";
+    }
+      </script>
     
 </body>
 </html>

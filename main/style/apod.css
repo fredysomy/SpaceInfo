@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
+    padding:0;
+    margin:0;
+}
+.navbar .navbar-brand{
+    font-size: 2.5rem;
+}
+.side-nav{
+    position: fixed;
+    z-index:2;
+    padding-left: 10px;
+    width:0px;
+    height:100vh;
+    background-color:#add6ff;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.side-nav a{
+    text-decoration: none;
+    color:black;
+}
+.closebtn{
+    font-size: 50px;
+    text-decoration: none;
+    position:relative;
+    color:black;
+
+}
+.startbtn{
+    font-size: 44px;
+    color:white;
+    text-decoration: none;
+    position: absolute;
+    color:black;
+    left:0px;
+}
+.pa p{
+    font-size:40px;
+}

@@ -16,9 +16,9 @@ function getpic() {
               var divm=document.getElementById("div11");
               var divi=document.createElement("div");
                var hr=document.createElement("a");
-              divi.style.cssText='width:280px;height:300px;margin:2%;';
+              divi.style.cssText='width:280px;height:300px;margin:0%;';
               var divi1=document.createElement("div");
-              divi1.style.cssText='width:260px;height:250px;margin:10px;';
+              divi1.style.cssText='width:260px;height:250px;margin:5px;';
               var im=document.createElement("img");
               var para1=document.createElement("p");
               var para2=document.createElement("p");
@@ -38,19 +38,16 @@ function getpic() {
               hr.setAttribute("href",x);
 
               im.style.cssText='background-size: cover;width:100%;height:100%;';
-              var n1=document.createTextNode(namerover);
-              var n2=document.createTextNode(stat);
-              var n3=document.createTextNode(eardate);
+             
                hr.appendChild(im);
               divi1.appendChild(hr);
-              divi.appendChild(n1);
-              divi.appendChild(n2);
-              divi.appendChild(n3);
+              
               divi.appendChild(divi1);
               divm.appendChild(divi);
           
           
           
           
-        }} );
+        }
+       } );
       }
