@@ -16,26 +16,26 @@
           </nav>
          <div class="side-nav" id="side-nav">
           <img src="https://cdn3.iconfinder.com/data/icons/status/100/close_1-512.png"  onclick="closeNav()" width="30" height="30">
-           
+          <hr class="my-4">
           <a href="../index.html" class="display-4"><h3>HOME</h3></a>
-          <hr class="my-4">
+          
           <a href="apod.html" class="lead"><h3>APOD</h3></a>
-          <hr class="my-4">
+          
           <a href="roverpics.html" class="lead"><h3>Mars Images</h3></a>
-          <hr class="my-4">
+          
         <a href="geo.html" class="lead"><h3>EONET</h3></a>
-        <hr class="my-4">
+        
             <a href="iss.html" class="lead"><h3>ISS live position</h3></a>
-            <hr class="my-4">
+            
          </div>
          
         <div class="container-fluid">
             <div class="jumbotron jumbotron-fluid" id="ttop">
-                <h1 class="display-4" align="center">Mars Images</h1>
-                <p class="lead" align="center">This website shows images taken from Mars from the rovers(Opportunity,Spirit,Curiosity).</p>
+                <h1 id="main" class="display-4" align="center">Mars Images</h1>
+                <p id="le" class="lead" align="center">This website shows images taken from Mars from the rovers(Opportunity,Spirit,Curiosity).</p>
 
-<p class="lead" align="center" style="color:blue;text-decoration:solid;">The term “Sol” is short for Solar day, which is the time it takes Mars to revolve once around its own axis.</p>
-                <p class="lead" align="center"><b>Curiosity Rover-</b> 0-2105 SOL and Active,<b>Opportunity Rover-</b>0-5107 SOL and Compleated,<b>Spirit Rover-</b>0-2208 SOL and Compleated</p>
+<p class="lead" id="le" align="center" style="margin-top:0;margin-bottom:0;color:blue;text-decoration:solid;">The term “Sol” is short for Solar day, which is the time it takes Mars to revolve once around its own axis.</p>
+                <p id="le" class="lead" align="center"><b>Curiosity Rover-</b> 0-2105 SOL and Active,<b>Opportunity Rover-</b>0-5107 SOL and Compleated,<b>Spirit Rover-</b>0-2208 SOL and Compleated</p>
 <div class="form-group" align="center" style="background-color: rgb(212, 212, 212);">
     <select id="rover">
         <option value=" ">Select the Rover</option>
@@ -43,7 +43,7 @@
         <option value="opportunity">Opportunity</option>
         <option value="spirit">Spirit</option>
     </select><input id="sool" class="form-control" required=required type="text" placeholder="Enter the SOL" style="width:300px;">
-<button class="btn btn-primary btn-sm" onclick="getpic()">image</button></div>
+<button class="btn btn-primary btn-sm" onclick="getpic()">Search</button></div>
 <div class="div1" id="div11" style="justify-content:center;width: 100%;height:fit-content;display: flex;flex-direction: row;flex-wrap: wrap;">
 </div></div>
 <div style="position:absolute;padding:0;bottom:10px;right:10px;width:50px;height:50px;position:fixed;border-radius:10px;background-color:rgb(255, 213, 213)">

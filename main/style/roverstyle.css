@@ -3,7 +3,7 @@
     margin:0;scroll-behavior: smooth;
 }
 .navbar .navbar-brand{
-    font-size: 2.5rem;
+    font-size: 1.3rem;
 }
 .side-nav{
     position: fixed;
@@ -37,8 +37,24 @@
 .jumbotron{
     padding:0;
     margin:0;
-<<<<<<< HEAD
 }
-=======
+
+@media all and (max-width:500px){
+    
+    #main{
+        font-size:33px;
+     }
+     
+     #le{
+        font-size: 17px;
+    }
+   
 }
->>>>>>> 0a95e08b383e7bca6f75a1956ec5571c24f3d631
+@media all and (max-width:350px){
+   #main{
+       font-size:25px;
+    }
+   
+    #le{
+        font-size: 15px;
+    }}
