@@ -26,6 +26,9 @@
     color:black;
 
 }
+#close{
+    margin-top: 25px;
+}
 .startbtn{
     font-size: 44px;
     color:white;
