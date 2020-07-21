@@ -1,8 +1,9 @@
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');body{
     width:100%;
     height:100%;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
+html{
     padding:0;
     margin:0;
 }
