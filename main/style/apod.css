@@ -27,9 +27,11 @@
 
 }
 #close{
-    margin-top: 19px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-left: 5.5px;
 }
-}
+
 .startbtn{
     font-size: 44px;
     color:white;

@@ -19,7 +19,9 @@
 }
 
 #close{
-    margin-top: 19px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-left: 5.5px;
 }
 .side-nav a{
     text-decoration: none;
