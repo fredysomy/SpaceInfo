@@ -8,7 +8,7 @@ html{
     margin:0;
 }
 .navbar .navbar-brand{
-    font-size: 2.5rem;
+    font-size: 1.6rem;font-family: 'Orbitron', sans-serif;
 }
 .side-nav{
     position: fixed;
@@ -25,7 +25,9 @@ html{
     margin-bottom: 10px;
     margin-left: 5.5px;
 }
-
+#df{
+    font-family: 'Orbitron', sans-serif;
+}
 .side-nav a{
     text-decoration: none;
     color:black;

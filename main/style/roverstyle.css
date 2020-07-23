@@ -3,8 +3,9 @@
     margin:0;scroll-behavior: smooth;
 }
 .navbar .navbar-brand{
-    font-size: 1.3rem;
+    font-size: 1.6rem;font-family: 'Orbitron', sans-serif;
 }
+
 .side-nav{
     position: fixed;
     z-index:2;
@@ -31,6 +32,9 @@
     position:relative;
     color:black;
 
+}
+#df{
+    font-family: 'Orbitron', sans-serif;
 }
 .startbtn{
     font-size: 44px;
