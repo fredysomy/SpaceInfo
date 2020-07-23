@@ -9,7 +9,7 @@ function getq() {
         dat=data['explanation'];
      dat1=data['url'];
      xyz=document.getElementById('im');
-xyz.style.cssText="width:80%;height:80%;margin:10%;margin-top:3%;";
+xyz.style.cssText="width:80%;height:50%;margin:10%;margin-top:3%;";
         
        xyz.setAttribute("src",dat1);
       
