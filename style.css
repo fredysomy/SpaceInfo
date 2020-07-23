@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');html{
     padding:0;
     margin:0;
@@ -6,6 +6,7 @@
 }
 .navbar .navbar-brand{
     font-size: 1.6rem;
+    font-family: 'Orbitron', sans-serif;
 }
 .side-nav{
     position: fixed;
@@ -18,11 +19,15 @@
     overflow: hidden;
     transition: 0.2s;
 }
+#df{
+    font-family:'Orbitron', sans-serif ;
+}
 
 #close{
     margin-top: 16px;
     margin-bottom: 10px;
     margin-left: 5.5px;
+    
 }
 .side-nav a{
     text-decoration: none;
