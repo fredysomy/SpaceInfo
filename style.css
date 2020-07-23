@@ -12,6 +12,7 @@
     z-index:2;
     padding-left: 10px;
     width:0px;
+ 
     height:100vh;
     background-color:#add6ff;
     overflow: hidden;
@@ -27,6 +28,10 @@
     text-decoration: none;
     color:black;
     margin-top: 20px;
+}
+.side-nav a:hover{
+    color:rgb(168, 168, 168);
+    text-decoration: none;
 }
 .closebtn{
     font-size: 50px;
@@ -59,6 +64,7 @@
 .jumbotron{
     margin:0;
     height:fit-content;
+    
    
 }
 
