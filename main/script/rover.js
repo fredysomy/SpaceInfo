@@ -1,11 +1,8 @@
 function getpic() {
   var rov=document.getElementById("rover").value;
   var s=sool.value;
-  var ur='https://api.nasa.gov/mars-photos/api/v1/rovers/';
-  var u1='/photos?sol=';
-  var rest="&";
-  var r="page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3";
-  var url=ur+rov+u1+s+rest+r;
+ 
+  var url=`https://api.nasa.gov/mars-photos/api/v1/rovers/${rov}/photos?sol=${s}&page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3`;
   document.getElementById("div11").innerHTML="";
   
   fetch(url)
