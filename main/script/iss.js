@@ -22,7 +22,7 @@ var mymap=L.map('mapid').setView([0, 0], 1);
        
         var lon=data.longitude;
         mark.setLatLng([lat,lon]);
-        url=`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`;
+        url=`https://api.bigdatacloud.net/data/reverse-geocode?latitude=${lat}&longitude=${lon}&localityLanguage=en`;
         fetch(url).then(resp =>resp.json()).then(data =>{
             var tx=document.createElement("p");
             var x=data.localityInfo.informative[0].name;
