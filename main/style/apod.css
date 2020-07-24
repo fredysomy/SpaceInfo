@@ -19,6 +19,10 @@
     text-decoration: none;
     color:black;
 }
+.side-nav a:hover{
+    color:rgb(168, 168, 168);
+    text-decoration: none;
+}
 .closebtn{
     font-size: 50px;
     text-decoration: none;
@@ -49,5 +53,8 @@
 @media all and (max-width:500px){
     #main{
         font-size: 31px;
+    }
+    #a h3{
+        font-size: 23px;
     }
 } 

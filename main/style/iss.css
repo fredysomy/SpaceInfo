@@ -20,6 +20,10 @@ html{
     overflow: hidden;
     transition: 0.2s;
 }
+.side-nav a:hover{
+    color:rgb(168, 168, 168);
+    text-decoration: none;
+}
 #close{
     margin-top: 16px;
     margin-bottom: 10px;
@@ -69,4 +73,7 @@ html{
     #main{
         font-size:31px;
      }
+     #a h3{
+        font-size: 23px;
+    }
 }
