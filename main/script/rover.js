@@ -2,14 +2,17 @@ function getpic() {
   var rov=document.getElementById("rover").value;
   var s=sool.value;
  
-  var url=`https://api.nasa.gov/mars-photos/api/v1/rovers/${rov}/photos?sol=${s}&page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3`;
+  var url=`https://api.nasa.gov/mars-photos/api/v1/rovers/${rov}/photos?earth_date=${s}&page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3`;
   document.getElementById("div11").innerHTML="";
   
   fetch(url)
   .then(resp =>resp.json())
   .then(data =>{
           var array=data[Object.keys(data)[0]]
+        
+         
           for(i=0;i<array.length;i++){
+            
               var divm=document.getElementById("div11");
               var divi=document.createElement("div");
                var hr=document.createElement("a");
@@ -24,6 +27,7 @@ function getpic() {
               para2.style.cssText='font-size:15px;color:white;';
               para3.style.cssText='font-size:15px;color:white;';
               data1=array[i];
+             
               var x=data1.img_src
               var dat=data1.rover
               var namerover=dat.name
@@ -41,10 +45,10 @@ function getpic() {
               
               divi.appendChild(divi1);
               divm.appendChild(divi);
+          }
           
+        
           
-          
-          
-        }
+        
        } );
       }
