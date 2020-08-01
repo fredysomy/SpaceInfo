@@ -29,11 +29,7 @@ function getpic() {
               data1=array[i];
              
               var x=data1.img_src
-              var dat=data1.rover
-              var namerover=dat.name
-              var landdate=dat.landing_date
-              var laudate=dat.launch_date
-              var stat=dat.status
+              
               var eardate=data1.earth_date
               im.setAttribute("src",x);
               hr.setAttribute("href",x);
